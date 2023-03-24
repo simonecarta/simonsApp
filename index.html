@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/31a5da485b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>SimonzApp</title>
+</head>
+
+<body>
+    
+    <div class="app-container">
+
+        <!-- Inizio applicazione -->
+        <div class="side-app">
+
+            <div class="side-header">
+                <!-- Personal icon & three icons for options -->
+                <div class="side-header-avatar">
+                    <img class="avatar" src="/asset/1.jpg" alt="">
+                </div>
+                <div class="side-header-icons">
+                    <i class="fa-regular fa-circle fa-lg" style="color: #bababa;"></i>
+                    <i class="fa-solid fa-message fa-lg" style="color: #bababa;"></i>
+                    <i class="fa-sharp fa-solid fa-bars fa-lg" style="color: #bababa;"></i>
+
+                </div>
+            </div> <!-- End side header-->
+            
+            <div class="side-list">
+                <!-- Notify about new messages - notify desktop -->
+                <div class="side-list-notify">
+                    <div class="dot"> <i class="fa-regular fa-bell-slash fa-lg" style="color: #bababa;"></i></div>
+                    <div class="side-list-texts">
+                        <p><span class="bold f14">Ricevi notifiche di nuovi messaggi</span></p>
+                        <a class="SLT" href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                </div> <!-- End first part list about info/status-->
+                <!-- Input search -->
+                <div class="side-list-input">
+                    <div class="searching-bar">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #bababa;"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+
+                <!-- Chat's list begin -->
+                <div class="side-list-chats">
+                    
+                    <div class="template-chat">
+                    <div class="side-list-chats-avatar">
+                        <img class="avatar" src="/asset/2.jpg" alt="">
+                    </div>
+                    <div class="side-list-chats-texts">
+                        <div class="chat-name-hours">
+                            <p class="chats-name">Michela</p>
+                            <p class="hours"> 14:51</p>
+                        </div>
+                        <p class="chats-last-msg">Non poteva essere altrimenti...</p>
+                    </div>
+                    </div>
+                    <div class="template-chat">
+                        <div class="side-list-chats-avatar">
+                            <img class="avatar" src="/asset/3.jpg" alt="">
+                        </div>
+                        <div class="side-list-chats-texts">
+                            <div class="chat-name-hours">
+                                <p class="chats-name">Roberto</p>
+                                <p class="hours"> 14:51</p>
+                            </div>
+                            <p class="chats-last-msg">Non poteva essere altrimenti...</p>
+                        </div>
+                    </div>
+                    <div class="template-chat">
+                        <div class="side-list-chats-avatar">
+                            <img class="avatar" src="/asset/4.jpg" alt="">
+                        </div>
+                        <div class="side-list-chats-texts">
+                            <div class="chat-name-hours">
+                                <p class="chats-name">Marika</p>
+                                <p class="hours"> 14:51</p>
+                            </div>
+                            <p class="chats-last-msg">Non poteva essere altrimenti...</p>
+                        </div>
+                    </div>
+
+                </div> <!-- Chat's list end -->
+
+        </div> <!-- end side part of the app -->
+
+        <!-- MAIN BEGIN -->
+        <div class="main-app">
+
+            <!-- MAIN HEADER -->
+            <div class="main-header">
+                <div class="main-header-sx">
+                    <!-- ACTUAL CHAT - Avatar, name & last access of -->
+                    <div class="active-chat">
+                        <div class="side-list-chats-avatar">
+                            <img class="avatar" src="/asset/4.jpg" alt="">
+                        </div>
+                        <div class="actual-chat-texts">
+                        <p class="active-chats-name">Marika</p>
+                        <p class="active-last-access">Ultimo accesso oggi alle 12:50</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-header-dx">
+                    <div class="main-header-dx-icons">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #bababa;"></i>
+                        <i class="fa-sharp fa-solid fa-paperclip fa-lg" style="color: #bababa;"></i>
+                        <i class="fa-sharp fa-solid fa-bars fa-lg" style="color: #bababa;"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- END MAIN HEADER -->
+
+            <!-- MAIN CHAT -->
+            <div class="main-chat">
+
+                <div class="messaggioUtente">
+                   
+                    <div class="text-message">
+                        <p>Ciao come stai? </p></div>
+                    <div class="hours-message">
+                        16:13
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <!-- MAIN FOOTER -->
+            <div class="main-footer">
+                <div class="emoji">
+                    <i class="fa-sharp fa-regular fa-face-smile fa-lg" style="color: #bababa;"></i>
+                </div>
+                <div class="message">
+                    <input type="text" placeholder="Scrivi un messaggio">
+                </div>
+                <div class="send-microphone">
+                    <i class="fa-solid fa-microphone fa-lg" style="color: #bababa;"></i>
+                </div>
+            </div> 
+            <!-- END MAIN FOOTER -->
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Template to reuse -->
+
+    <!-- chat a sx -->
+
+    <!-- <div class="side-list-chats-avatar">
+        <img class="avatar" src="/asset/1.jpg" alt="">
+    </div>
+    <div class="side-list-chats-texts">
+        <div class="chat-name-hours">
+            <p class="chats-name">Michele</p>
+            <p class="hours"> 14:51</p>
+        </div>
+        <p class="chats-last-msg">Non poteva essere altrimenti...</p>
+    </div> -->
+
+
+
+    <!-- messaggio -->
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
+</body>
+</html>
