@@ -39,13 +39,20 @@ body {
     font-size: 14px;
 }
 
+.dfr {
+    display: flex;
+    flex-direction: row;;
+}
+
+.aic {
+    align-items: center;
+}
+
 /* APPLICATION */
 .app-container {
     width: 80%;
     min-width: 900px;
     height: 95%;
-    display: flex;
-    flex-direction: row;
 }
 
 /* SIDE */
@@ -57,10 +64,7 @@ body {
 
 .side-header {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
     height: 60px; 
     padding: 2%;
@@ -78,23 +82,16 @@ body {
 .side-list {
     width: 100%;
     height: 80px;
-    display: flex;
-    flex-direction: row;
     background-color: rgba(76, 164, 215, 0.617);
-    align-items: center;
     padding: 2%;
 }
 
 .side-list-notify {
-    display: flex;
-    flex-direction: row;
     padding: 5px;
 }
 
 .dot {
     display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: #fff;
     width: 45px;
     height: 45px;
@@ -114,20 +111,14 @@ body {
 .side-list-input {
     width: 100%;
     height: 55px;
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
     background-color: rgb(228, 228, 228);
 }
 
 .searching-bar {
-    display: flex;
-    flex-direction: row;
     width: 95%;
     height: 80%;
     justify-content: space-evenly;
-    align-items: center;
     background-color: rgb(255, 255, 255);
     border-radius: 2px;
 }
@@ -148,7 +139,6 @@ body {
     display: flex;
     flex-direction: column;
     max-height: 700px;
-    
     width: 100%;
     overflow: hidden;
 }
@@ -180,8 +170,6 @@ body {
 }
 
 .chat-name-hours {
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
 
@@ -212,24 +200,18 @@ body {
     width: 100%;
     height: 60px;
     background-color: rgb(228, 228, 228);
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .main-header-sx {
     width: 50%;
     height: 100%;
     display: flex;
-   
-    align-items: center;
 }
 
 .active-chat {
     display: flex;
     justify-content: start;
-    align-items: center;
     margin-left: 2%;
 }
 
@@ -259,7 +241,6 @@ body {
 .main-header-dx-icons {
     display: flex;
     justify-content: space-around;
-    align-items: center;
     width: 20%;
 }
 
@@ -290,18 +271,12 @@ body {
     color: rgba(46, 46, 46, 0.5);
 }
 
-/* background: rgba(208, 249, 151, 0.701) */
-
-
 /* MAIN FOOTER  */
 
 .main-footer {
     width: 100%;
     height: 60px;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
     text-align: center;
     background-color: rgba(252, 239, 228, 0.91);
     border-top: 1px solid rgb(195, 195, 195);;
