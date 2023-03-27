@@ -92,6 +92,7 @@ body {
 
 .dot {
     display: flex;
+    justify-content: center;
     background-color: #fff;
     width: 45px;
     height: 45px;
@@ -143,6 +144,7 @@ body {
     overflow: hidden;
 }
 
+
 .template-chat {
     width: 100%;
     display: flex;
@@ -153,8 +155,14 @@ body {
     border-bottom: 1.2px solid rgba(46, 46, 46, 0.2);
 }
 
+.act-chat {
+    background-color: #c6c8c89d;
+    border-top: 1.2px solid rgba(46, 46, 46, 0.2);
+}
+
 .side-list-chats-active {
     background-color: rgb(209, 209, 209);
+    
 }
 
 .side-list-chats-texts {
@@ -179,8 +187,7 @@ body {
     font-weight: 300;
 }
 
-.chats-last-msg
- {
+.chats-last-msg{
     font-size: 14px;
     color: rgba(46, 46, 46, 0.5);
 }
@@ -244,6 +251,8 @@ body {
     width: 20%;
 }
 
+/* MAIN CHAT */
+
 .main-chat {
    height: 100%;
    background-image: url(/asset/sfondo.png);
@@ -251,25 +260,21 @@ body {
    padding: 35px;
 }
 
-.messaggioUtente {
-    position:relative;
-    min-width: 165px;
-    width: fit-content;
-    height: fit-content;
-    background: rgba(254, 254, 254, 0.721);
-    padding: 2%;
-    border-radius: 9px;
-    font-size: 15px;
-    font-weight: 500;
+.main-chat-sx {
+    align-items: flex-start;
 }
 
-.hours-message {
-    position: absolute;
-    right: 6px;
-    font-size: 10px;
-    bottom: 3px;
-    color: rgba(46, 46, 46, 0.5);
+.main-chat-dx {
+    align-items: flex-end;
 }
+
+.main-chat-dx, 
+.main-chat-sx {
+    display: flex;
+    flex-direction: column;
+    padding: 3%;
+}
+
 
 /* MAIN FOOTER  */
 
@@ -300,4 +305,30 @@ body {
 
 .send-microphone {
     width: 10%;
+}
+
+/* TEMPLATE MESSAGGI  */
+
+.messaggioUtente {
+    position:relative;
+    min-width: 165px;
+    width: fit-content;
+    height: fit-content;
+    background: rgba(254, 254, 254, 0.721);
+    padding: 2%;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.hours-message {
+    position: absolute;
+    right: 6px;
+    font-size: 10px;
+    bottom: 3px;
+    color: rgba(46, 46, 46, 0.5);
+}
+
+.persmess {
+    background: rgba(201, 255, 150, 0.538);
 }
