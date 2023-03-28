@@ -128,6 +128,12 @@ body {
     border-radius: 2px;
 }
 
+.newChatSearch {
+    height: 25px;
+    font-size: 13.5px;
+    margin-left: 5px;
+}
+
 .searching-bar input {
     border: 0;
     width: 70%;
@@ -179,12 +185,7 @@ body {
     justify-content: space-between;
 }
 
-.message-time {
-    top: 5px;
-    font-size: 12px;
-    font-weight: 300;
-    
-}
+
 
 .chats-last-msg{
     font-size: 14px;
@@ -302,7 +303,9 @@ body {
     position:relative;
     float: left;
     min-width: 165px;
-    max-width: 20%;
+    width: fit-content;
+    overflow-wrap: break-word;
+    max-width: 300px;
     margin: 5px 0px; 
     padding: 15px 15px 20px 15px;
     background: rgba(254, 254, 254, 0.721);
@@ -313,6 +316,12 @@ body {
 .message.sent {
     background: rgba(201, 255, 150, 0.538);
     float: right;
+    display: block;
+}
+
+.received {
+    background: rgba(254, 254, 254, 0.721);
+    float: left;
     display: block;
 }
 
@@ -332,3 +341,10 @@ body {
     display: block;
 }
 
+.message-time {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+    font-weight: 300;
+}
