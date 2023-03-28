@@ -54,7 +54,7 @@
                 <!-- Chat's list begin -->
                 <div class="side-list-chats">
                     
-                    <div class="template-chat act-chat">
+                    <div class="template-chat dfr" data-conversazione="0">
                     <div class="side-list-chats-avatar">
                         <img class="avatar" src="/asset/2.jpg" alt="">
                     </div>
@@ -66,7 +66,7 @@
                         <p class="chats-last-msg">Non poteva essere altrimenti...</p>
                     </div>
                     </div>
-                    <div class="template-chat dfr">
+                    <div class="template-chat dfr" data-conversazione="1">
                         <div class="side-list-chats-avatar">
                             <img class="avatar" src="/asset/3.jpg" alt="">
                         </div>
@@ -78,7 +78,7 @@
                             <p class="chats-last-msg">Non poteva essere altrimenti...</p>
                         </div>
                     </div>
-                    <div class="template-chat dfr">
+                    <div class="template-chat dfr" data-conversazione="2">
                         <div class="side-list-chats-avatar">
                             <img class="avatar" src="/asset/4.jpg" alt="">
                         </div>
@@ -125,65 +125,84 @@
 
             <!-- MAIN CHAT -->
             <div class="main-chat">
-
-                <div class="main-chat-dx">
-                    <div class="messaggioUtente persmess">
-                    <div class="text-message">
-                        <p>PERSONALE</p></div>
-                    <div class="hours-message">
-                        16:13
+                <div class="right-messages active" data-conversazione="0">
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message received">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="main-chat-sx">
-                    <div class="messaggioUtente">
-                    <div class="text-message">
-                        <p>ALTRUI</p></div>
-                    <div class="hours-message">
-                        16:13
+                <div class="right-messages" data-conversazione="1">
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message received">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
                     </div>
                 </div>
-            </div>
-
-
-
-               
+                <div class="right-messages" data-conversazione="2">
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message received">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                    <div class="message sent">
+                        <span class="message-text">Ciao, come stai?</span>
+                        <span class="message-time">15:10</span>
+                    </div>
+                </div>
             </div>
 
             <!-- MAIN FOOTER -->
             <div class="main-footer dfr aic">
+                
                 <div class="emoji">
                     <i class="fa-sharp fa-regular fa-face-smile fa-lg" style="color: #bababa;"></i>
                 </div>
-                <div class="message">
-                    <input type="text" placeholder="Scrivi un messaggio">
+                <div class="messageInput">
+                    <input class="inputMessage" type="text" placeholder="Scrivi un messaggio">
                 </div>
                 <div class="send-microphone">
                     <i class="fa-solid fa-microphone fa-lg" style="color: #bababa;"></i>
+                    <i class="fa-sharp fa-solid fa-paper-plane fa-lg nv" style="color: #bababa;"></i>
                 </div>
+
             </div> <!-- END MAIN FOOTER -->
-        </div>
-    </div>
+
+        </div> <!-- END MAIN APP-->
+
+    </div> <!-- END APP CONTAINER-->
 
 
 
 
     <!-- Template to reuse -->
-
-    <!-- chat a sx -->
-
-    <!-- <div class="side-list-chats-avatar">
-        <img class="avatar" src="/asset/1.jpg" alt="">
+    <div class="template nv">
+    <div class="message sent">
+        <span class="message-text">Ciao, come stai?</span>
+        <span class="message-time">15:10</span>
     </div>
-    <div class="side-list-chats-texts">
-        <div class="chat-name-hours">
-            <p class="chats-name">Michele</p>
-            <p class="hours"> 14:51</p>
-        </div>
-        <p class="chats-last-msg">Non poteva essere altrimenti...</p>
-    </div> -->
+    </div>
 
+
+
+    
 
 
     <!-- messaggio -->
