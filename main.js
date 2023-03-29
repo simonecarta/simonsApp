@@ -6,7 +6,7 @@ $(document).ready(function () {
     var microphoneIcon = $("i.fa-solid.fa-microphone.fa-lg")
     var sendIcon = $("i.fa-sharp.fa-solid.fa-paper-plane.fa-lg")
 
-    var inputSearchContact = $(".newChatSearch")
+    
 
 
     // changing icon when input's value changes
@@ -35,7 +35,6 @@ $(document).ready(function () {
 
     // search a contact in a list 
     
-    searchContact(inputSearchContact)
 
 
 
@@ -43,10 +42,10 @@ $(document).ready(function () {
      * FUNCTIONS 
      */
 
+    // Main function to send message
     function sendMessage(input){
         // ottieni testo
         var testoMessaggio = input.val().trim();
-        
         
         // controllo contenuto
         if(testoMessaggio != ""){
@@ -73,7 +72,7 @@ $(document).ready(function () {
             autoReply()
     }}
 
-
+    // function to add zero at minute/hours 
     function addZero (numero){
         if(numero < 10){
             numero = "0" + numero
@@ -81,7 +80,7 @@ $(document).ready(function () {
         return numero
     }
 
-
+    // Autoreply after 1 second 
     function autoReply (){
 
         setTimeout(function(){
@@ -106,6 +105,38 @@ $(document).ready(function () {
         },1000)
 
     }
+
+    /**
+     * INIZIO RICERCA NELLA LISTA DEI CONTATTI
+     */
+
+    // valore input
+    
+    var inputSearchContact = $("input.newChatSearch")
+    
+
+
+    inputSearchContact.keyup(function(){
+
+        // referenza dell'input
+        var inputSearchContact = $("input.newChatSearch")
+        // referenza del valore della ricerca
+        var testoRicerca = inputSearchContact.val().trim();
+        var inputTestoRicerca = testoRicerca.tostring
+        // referenza della lista contatti (Qua mi sta creando un oggetto con tre referenze )
+        var contatti = $(".chats-name")
+        var contattiValue = contatti.val()
+        
+        console.log(contattiValue)
+        
+        
+        
+
+
+
+    })
+
+
 
         
 
