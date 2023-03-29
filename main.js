@@ -106,34 +106,35 @@ $(document).ready(function () {
 
     }
 
+
     /**
      * INIZIO RICERCA NELLA LISTA DEI CONTATTI
      */
 
     // valore input
     
-    var inputSearchContact = $("input.newChatSearch")
-    
+    var searchText = $(".chatSearch")
 
-
-    inputSearchContact.keyup(function(){
+    searchText.keyup(function(){
 
         // referenza dell'input
-        var inputSearchContact = $("input.newChatSearch")
+        var searchText = $(".chatSearch")
         // referenza del valore della ricerca
-        var testoRicerca = inputSearchContact.val().trim();
-        var inputTestoRicerca = testoRicerca.tostring
-        // referenza della lista contatti (Qua mi sta creando un oggetto con tre referenze )
-        var contatti = $(".chats-name")
-        var contattiValue = contatti.val()
-        
-        console.log(contattiValue)
-        
-        
-        
+        var testoRicerca = searchText.val().trim();
 
-
-
+        // referenza della lista contatti 
+        var contatti = $(".chats-name").text()
+        // var contattiValue = contatti.val()
+        
+        console.log(testoRicerca)
+    
+        for ( var i=0; i < 3; i++ ){
+            if (contatti[i].includes(testoRicerca)){
+                console.log("match")
+            } else {
+                console.log("no match")
+            }
+        }
     })
 
 
