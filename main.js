@@ -5,8 +5,12 @@ $(document).ready(function () {
     var inputMessageValue = inputMessage.tostring;
     var microphoneIcon = $("i.fa-solid.fa-microphone.fa-lg")
     var sendIcon = $("i.fa-sharp.fa-solid.fa-paper-plane.fa-lg")
+    var searchText = $(".chatSearch")
 
-    
+
+    /**
+     * FUNCTIONS 
+     */
 
 
     // changing icon when input's value changes
@@ -21,27 +25,18 @@ $(document).ready(function () {
 
     // detect new message sent 
 
-    //with icon
-    sendIcon.click(function(){
-        sendMessage(inputMessage);
-    })
-
-    //with enter 
-    inputMessage.keypress(function(e) {
-        if(e.which == 13){
+        //with icon
+        sendIcon.click(function(){
             sendMessage(inputMessage);
-        }
-    })
+        })
 
-    // search a contact in a list 
+        //with enter 
+        inputMessage.keypress(function(e) {
+            if(e.which == 13){
+                sendMessage(inputMessage);
+            }
+        })
     
-
-
-
-    /**
-     * FUNCTIONS 
-     */
-
     // Main function to send message
     function sendMessage(input){
         // ottieni testo
@@ -106,7 +101,6 @@ $(document).ready(function () {
             // aggiunta nuovo messaggio al contenitore attivo
             $(".right-messages.active").append(autoResponse)
 
-            
             // SCROLL 
             scrollMessaggio()
 
@@ -114,14 +108,7 @@ $(document).ready(function () {
 
     }
 
-
-    /**
-     * INIZIO RICERCA NELLA LISTA DEI CONTATTI
-     */
-
-    // valore input
-    
-    var searchText = $(".chatSearch")
+   // Searching contact
 
     searchText.keyup(function(){
 
@@ -129,20 +116,17 @@ $(document).ready(function () {
         var search = $(this).val().trim().toLowerCase();
 
         // nome contatto nel loop
-        $("body > div.app-container.dfr > div.side-app > div.side-list-chats").each(function(){
-            var nomeContatto = $(this).find("div.side-list-chats-texts").text().toLowerCase();
+        $(".contact").each(function(){
+            var nomeContatto = $(this).find("h3").text().toLowerCase();
 
             // verifica input con nomi contatti
-
-            if( nomeContatto.includes(search) ){
+            if( nomeContatto.includes(search)){
                 $(this).show();
             } else {
                 $(this).hide()
             }
-
         })
     })
-
 
     // Scroll all'ultimo messaggio inserito
 
@@ -154,11 +138,5 @@ $(document).ready(function () {
         }, 300);
     }
 
-
-
-
-
-
-        
 
 }); //end doc ready
