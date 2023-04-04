@@ -70,6 +70,10 @@ $(document).ready(function () {
 
             // risposta automatica utente 
             autoReply()
+
+            // SCROLL
+            scrollMessaggio()
+
     }}
 
     // function to add zero at minute/hours 
@@ -102,6 +106,10 @@ $(document).ready(function () {
             // aggiunta nuovo messaggio al contenitore attivo
             $(".right-messages.active").append(autoResponse)
 
+            
+            // SCROLL 
+            scrollMessaggio()
+
         },1000)
 
     }
@@ -117,25 +125,37 @@ $(document).ready(function () {
 
     searchText.keyup(function(){
 
-        // referenza dell'input
-        var searchText = $(".chatSearch")
-        // referenza del valore della ricerca
-        var testoRicerca = searchText.val().trim();
+        //valore input
+        var search = $(this).val().trim().toLowerCase();
 
-        // referenza della lista contatti 
-        var contatti = $(".chats-name").text()
-        // var contattiValue = contatti.val()
-        
-        console.log(testoRicerca)
-    
-        for ( var i=0; i < 3; i++ ){
-            if (contatti[i].includes(testoRicerca)){
-                console.log("match")
+        // nome contatto nel loop
+        $("body > div.app-container.dfr > div.side-app > div.side-list-chats").each(function(){
+            var nomeContatto = $(this).find("div.side-list-chats-texts").text().toLowerCase();
+
+            // verifica input con nomi contatti
+
+            if( nomeContatto.includes(search) ){
+                $(this).show();
             } else {
-                console.log("no match")
+                $(this).hide()
             }
-        }
+
+        })
     })
+
+
+    // Scroll all'ultimo messaggio inserito
+
+    function scrollMessaggio(){
+        var chatScroll = $(".right-messages.active").height();
+
+        $(".main-chat").animate({
+            scrollTop: chatScroll
+        }, 300);
+    }
+
+
+
 
 
 
