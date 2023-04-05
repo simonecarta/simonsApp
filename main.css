@@ -320,6 +320,9 @@ body {
     /* display: none; jQuery */
 }
 
+.fa-solid.fa-chevron-down.fa-sm:hover {
+    cursor: pointer;
+}
 
 .message.sent {
     background: rgba(201, 255, 150, 0.538);
@@ -366,4 +369,31 @@ body {
 
 .message-text {
     margin-right: 15px;
+}
+
+/* PopUp menu info - delete message */
+
+.popupmenu {
+    display: none; /* jQuery */
+    position: absolute;
+    right: 0;
+    top: 60px;
+    text-align: center;
+    background-color: #d2dbdc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.popupmenu a {
+    font-family: 'Lato', sans-serif;
+    display: block;
+    text-decoration: none;
+    color: #797979;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.popupmenu a:hover{
+    color: #575757;
 }
