@@ -16,7 +16,7 @@ $(document).ready(function () {
      * FUNCTIONS 
      */
 
-    // changing icon when input's value changes
+    // Changing icon when input's value changes
    inputMessage.keyup(function(){
     if ( inputMessageValue !== "") {
         microphoneIcon.addClass("nv");
@@ -26,13 +26,13 @@ $(document).ready(function () {
     } 
     })
 
-    // detect new message sent 
-        //with icon
+    // Detect new message sent 
+        // With icon
         sendIcon.click(function(){
             sendMessage(inputMessage);
         })
 
-        //with enter 
+        // With enter 
         inputMessage.keypress(function(e) {
             if(e.which == 13){
                 sendMessage(inputMessage);
@@ -45,36 +45,37 @@ $(document).ready(function () {
         // ottieni testo
         var testoMessaggio = input.val().trim();
         
-        // controllo contenuto
+        // Checking content
         if(testoMessaggio != ""){
-            //clone template
+
+            //Clone template
             var nuovoMessaggio = $(".template .message.sent").clone();
             
-            //aggiunta testo al messaggio
+            // Adding text in messages
             nuovoMessaggio.children('.message-text').text(testoMessaggio)
 
-            //creazione e inserimento ora attuale
+            // Creating date 
             var data = new Date();
             var ora = addZero(data.getHours());
             var minuti = addZero(data.getMinutes());
             var orario = ora + ":" + minuti;
             nuovoMessaggio.children('.message-time').text(orario)
 
-            // aggiunta nuovo messaggio al contenitore attivo
+            // Adding new mnessage in active's chat
             $(".right-messages.active").append(nuovoMessaggio)
 
-            // reset input messaggio 
+            // Reset input message 
             inputMessage.val("")
 
-            // risposta automatica utente 
+            // Autoreply 
             autoReply()
 
-            // SCROLL
+            // Scroll
             scrollMessaggio()
 
     }}
 
-    // function to add zero at minute/hours 
+    // Function to add zero at minute/hours 
     function addZero (numero){
         if(numero < 10){
             numero = "0" + numero
@@ -87,13 +88,13 @@ $(document).ready(function () {
 
         setTimeout(function(){
 
-            // clonazione del messaggio
+            // message clone
             var autoResponse = $(".template .received").clone();
 
-            // aggiunta del testo al messaggio
+            // adding text in messages
             autoResponse.children('.message-text').text("Questa è una risposta automatica");
             
-            // aggiunta dell'ora attuale alla risposta
+            // actual hours at response
             var data = new Date();
             var ora = addZero(data.getHours());
             var minuti = addZero(data.getMinutes());
@@ -101,27 +102,25 @@ $(document).ready(function () {
 
             autoResponse.children('.message-time').text(orario)
 
-            // aggiunta nuovo messaggio al contenitore attivo
+            // adding new mnessage in active's chat
             $(".right-messages.active").append(autoResponse)
 
             // SCROLL 
             scrollMessaggio()
 
         },1000)
-
     }
 
    // Searching contact
     searchText.keyup(function(){
 
-        //valore input
+        // Input's value
         var search = $(this).val().trim().toLowerCase();
 
-        // nome contatto nel loop
         $(".contact").each(function(){
             var nomeContatto = $(this).find("h3").text().toLowerCase();
 
-            // verifica input con nomi contatti
+            // Verify input with names
             if( nomeContatto.includes(search)){
                 $(this).show();
             } else {
@@ -130,18 +129,16 @@ $(document).ready(function () {
         })
     })
 
-    // Scroll all'ultimo messaggio inserito
+    // Scroll at last messages
     function scrollMessaggio(){
         var chatScroll = $(".right-messages.active").height();
-        
-
+    
         $(".main-chat").animate({
             scrollTop: chatScroll
         }, 300);
     }
 
-
-    // Deleting own messages 
+    // Deleting messages 
 
     // Reference to chevron down
     $(document).on("click", ".fa-solid.fa-chevron-down.fa-sm", chevronDownClick);
@@ -149,12 +146,21 @@ $(document).ready(function () {
     function chevronDownClick(){
         $(this).next().toggle();
     }
-
+    
     // Reference to delete message options
     $(document).on("click", ".deleteMessage", deleteThis);
 
     function deleteThis(){
         $(this).parents(".message").remove();
     }
+
+    // Navigation between chats
+    $(".contact").click(function(){
+        var contact = $(this).attr("data-conversazione");
+
+        $('.right-messages').removeClass('active');
+
+        $('.right-messages[data-conversazione="' + contact + '"]').addClass('active');
+    })
 
 }); //end doc ready
