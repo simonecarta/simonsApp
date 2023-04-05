@@ -137,6 +137,7 @@ body {
 .searching-bar input {
     border: 0;
     width: 70%;
+    height: 30px;
     font-size: 11.5px;
 }
 
@@ -316,7 +317,7 @@ body {
 .fa-solid.fa-chevron-down.fa-sm {
     position: absolute;
     right: 8px;
-    color: #797979;
+    color: #b9b9b9;
     /* display: none; jQuery */
 }
 
@@ -374,7 +375,7 @@ body {
 /* PopUp menu info - delete message */
 
 .popupmenu {
-    
+    display: none; /* jQuery*/
     position: absolute;
     right: 0;
     top: 60px;
@@ -397,3 +398,4 @@ body {
 .popupmenu a:hover{
     color: #575757;
 }
+

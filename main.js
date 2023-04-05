@@ -141,32 +141,20 @@ $(document).ready(function () {
     }
 
 
-    /**
-     *  ELIMINAZIONE DEI MESSAGGI
-     * 
-     * 1) Prendere la referenza della chevron down
-     * 2) Creare il menu pop-up in HTML/CSS (info - delete)
-     * 3) Bindare al click del menu il show/hide - toggle 
-     * 3.1) Prendere la referenza del menu popup 
-     * n) Al click di QUELLA cancellare il parente 
-     * 
-     */
+    // Deleting own messages 
 
+    // Reference to chevron down
+    $(document).on("click", ".fa-solid.fa-chevron-down.fa-sm", chevronDownClick);
 
-    // Referenza chevron down
-    $(document).on("click", ".fa-solid.fa-chevron-down.fa-sm", chevronDownClick)
-
-    // Referenza popup menu
-    $(document).on("click", ".popupmenu", popupmenuClick)
-
-    
-    
     function chevronDownClick(){
-        console.log("chevron")
+        $(this).next().toggle();
     }
 
-    function popupmenuClick(){
-        console.log("popupmenu")
+    // Reference to delete message options
+    $(document).on("click", ".deleteMessage", deleteThis);
+
+    function deleteThis(){
+        $(this).parents(".message").remove();
     }
-   
+
 }); //end doc ready
