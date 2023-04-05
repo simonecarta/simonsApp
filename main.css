@@ -312,6 +312,15 @@ body {
     clear: both;
 }
 
+
+.fa-solid.fa-chevron-down.fa-sm {
+    position: absolute;
+    right: 8px;
+    color: #797979;
+    /* display: none; jQuery */
+}
+
+
 .message.sent {
     background: rgba(201, 255, 150, 0.538);
     float: right;
@@ -353,4 +362,8 @@ body {
     right: 5px;
     font-size: 10px;
     font-weight: 300;
+}
+
+.message-text {
+    margin-right: 15px;
 }

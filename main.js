@@ -6,6 +6,15 @@ $(document).ready(function () {
     var microphoneIcon = $("i.fa-solid.fa-microphone.fa-lg")
     var sendIcon = $("i.fa-sharp.fa-solid.fa-paper-plane.fa-lg")
     var searchText = $(".chatSearch")
+    var chevronDown = $(".fa-solid.fa-chevron-down.fa-sm");
+    var chevronDownB =$(".fa-solid.fa-chevron-down.fa-sm");
+
+
+    // chevronDown.click(function(){
+    //     console.log("click chevron")
+    // })
+
+   
 
 
     /**
@@ -36,6 +45,7 @@ $(document).ready(function () {
                 sendMessage(inputMessage);
             }
         })
+
     
     // Main function to send message
     function sendMessage(input){
@@ -106,6 +116,8 @@ $(document).ready(function () {
 
         },1000)
 
+        
+
     }
 
    // Searching contact
@@ -132,6 +144,7 @@ $(document).ready(function () {
 
     function scrollMessaggio(){
         var chatScroll = $(".right-messages.active").height();
+        
 
         $(".main-chat").animate({
             scrollTop: chatScroll
@@ -139,4 +152,22 @@ $(document).ready(function () {
     }
 
 
+    /**
+     *  ELIMINAZIONE DEI MESSAGGI
+     * 
+     * 1) Prendere la referenza della chevron down
+     * 2) Creare il menu pop-up in HTML/CSS (info - delete)
+     * 3) Bindare al click del menu il show/hide - toggle  
+     * n) Al click di QUELLA cancellare il parente 
+     * 
+     */
+
+
+    // Referenza chevron down
+    $(document).on("click", ".fa-solid.fa-chevron-down.fa-sm", chevronDownClick)
+
+    function chevronDownClick(){
+        console.log("Chevron Down Click")
+    }
+   
 }); //end doc ready
