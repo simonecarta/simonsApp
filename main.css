@@ -374,7 +374,7 @@ body {
 /* PopUp menu info - delete message */
 
 .popupmenu {
-    display: none; /* jQuery */
+    
     position: absolute;
     right: 0;
     top: 60px;

@@ -1,6 +1,9 @@
 $(document).ready(function () {
     
-    // reference input message
+    /**
+     * REFERENCES 
+     */
+
     var inputMessage = $(".inputMessage");
     var inputMessageValue = inputMessage.tostring;
     var microphoneIcon = $("i.fa-solid.fa-microphone.fa-lg")
@@ -9,18 +12,9 @@ $(document).ready(function () {
     var chevronDown = $(".fa-solid.fa-chevron-down.fa-sm");
     var chevronDownB =$(".fa-solid.fa-chevron-down.fa-sm");
 
-
-    // chevronDown.click(function(){
-    //     console.log("click chevron")
-    // })
-
-   
-
-
     /**
      * FUNCTIONS 
      */
-
 
     // changing icon when input's value changes
    inputMessage.keyup(function(){
@@ -33,7 +27,6 @@ $(document).ready(function () {
     })
 
     // detect new message sent 
-
         //with icon
         sendIcon.click(function(){
             sendMessage(inputMessage);
@@ -116,12 +109,9 @@ $(document).ready(function () {
 
         },1000)
 
-        
-
     }
 
    // Searching contact
-
     searchText.keyup(function(){
 
         //valore input
@@ -141,7 +131,6 @@ $(document).ready(function () {
     })
 
     // Scroll all'ultimo messaggio inserito
-
     function scrollMessaggio(){
         var chatScroll = $(".right-messages.active").height();
         
@@ -157,7 +146,8 @@ $(document).ready(function () {
      * 
      * 1) Prendere la referenza della chevron down
      * 2) Creare il menu pop-up in HTML/CSS (info - delete)
-     * 3) Bindare al click del menu il show/hide - toggle  
+     * 3) Bindare al click del menu il show/hide - toggle 
+     * 3.1) Prendere la referenza del menu popup 
      * n) Al click di QUELLA cancellare il parente 
      * 
      */
@@ -166,8 +156,17 @@ $(document).ready(function () {
     // Referenza chevron down
     $(document).on("click", ".fa-solid.fa-chevron-down.fa-sm", chevronDownClick)
 
+    // Referenza popup menu
+    $(document).on("click", ".popupmenu", popupmenuClick)
+
+    
+    
     function chevronDownClick(){
-        console.log("Chevron Down Click")
+        console.log("chevron")
+    }
+
+    function popupmenuClick(){
+        console.log("popupmenu")
     }
    
 }); //end doc ready
