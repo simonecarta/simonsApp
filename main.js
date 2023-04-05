@@ -132,7 +132,6 @@ $(document).ready(function () {
     // Scroll at last messages
     function scrollMessaggio(){
         var chatScroll = $(".right-messages.active").height();
-    
         $(".main-chat").animate({
             scrollTop: chatScroll
         }, 300);
@@ -162,5 +161,4 @@ $(document).ready(function () {
 
         $('.right-messages[data-conversazione="' + contact + '"]').addClass('active');
     })
-
 }); //end doc ready
